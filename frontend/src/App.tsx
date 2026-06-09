@@ -84,8 +84,14 @@ function AppContent() {
 }
 
 function App() {
+  const basename = import.meta.env.VITE_BASE_PATH ?? (
+    typeof window !== 'undefined' && window.location.pathname.startsWith('/GlowPedia')
+      ? '/GlowPedia'
+      : '/'
+  );
+
   return (
-    <BrowserRouter basename="/GlowPedia">
+    <BrowserRouter basename={basename}>
       <AuthProvider>
         <ProModalProvider>
           <SavedProductsProvider>
