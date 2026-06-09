@@ -16,7 +16,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
   supabaseClient = {
     auth: {
       getSession: async () => ({ data: { session: null }, error: null }),
-      onAuthStateChange: (callback: Function) => ({ data: { subscription: { unsubscribe: () => {} } } }),
+      onAuthStateChange: (_callback: Function) => ({ data: { subscription: { unsubscribe: () => {} } } }),
       signUp: async () => ({ error: { message: 'Supabase not configured' } }),
       signInWithPassword: async () => ({ error: { message: 'Supabase not configured' } }),
       signOut: async () => {},

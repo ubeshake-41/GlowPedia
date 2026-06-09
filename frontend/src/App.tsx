@@ -33,6 +33,7 @@ function AppContent() {
         <div style={{ paddingBottom: '70px' }}> {/* Space for mobile nav */}
           <Routes>
             {/* Public routes */}
+            <Route index element={<Homepage />} />
             <Route path="/" element={<Homepage />} />
             
             {/* Auth routes */}
@@ -84,7 +85,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/GlowPedia">
       <AuthProvider>
         <ProModalProvider>
           <SavedProductsProvider>

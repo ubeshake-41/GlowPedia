@@ -31,11 +31,10 @@ export default function DailyTracker() {
   const navigate = useNavigate();
   const isPro = user?.user_metadata?.role === 'pro';
 
-  const [routine, setRoutine] = useState(MOCK_ROUTINE);
+  const routine = MOCK_ROUTINE;
   const [steps, setSteps] = useState<RoutineStep[]>(MOCK_ROUTINE.steps);
   const [hasCompletedToday, setHasCompletedToday] = useState(false);
   const [currentStreak, setCurrentStreak] = useState(0);
-  const [lastCompletedDate, setLastCompletedDate] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   // Load routine completion data and streak info from Supabase
@@ -156,7 +155,7 @@ export default function DailyTracker() {
       yesterday.setDate(yesterday.getDate() - 1);
       const yesterdayStr = yesterday.toISOString().split('T')[0];
       
-      const { data: yesterdayCompletion, error: yesterdayError } = await supabase
+      const { data: yesterdayCompletion } = await supabase
         .from('routine_completions')
         .select('*')
         .eq('user_id', user!.id)
