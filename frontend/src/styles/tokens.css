@@ -1,0 +1,119 @@
+/* ══════════════════════════════════════════════════════════════
+   Glowpedia Design Tokens
+   "Structured Soft Clarity" Design System
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── SURFACES ────────────────────────────────────────────── */
+  --color-bg:            #F6F5FB;   /* Primary background — cool off-white with lavender undertone */
+  --color-bg-subtle:     #FFFFFF;   /* Cards, product pages, modals */
+  --color-bg-muted:      #EDE8FF;   /* Hover states, card fills, active nav items */
+  --color-border:        rgba(100, 125, 200, 0.11);  /* Default card/input borders */
+  --color-border-strong: rgba(100, 125, 200, 0.28);  /* Focused states, section separators */
+
+  /* ── TEXT ───────────────────────────────────────────────── */
+  --color-text-primary:  #1F2937;   /* Headings, primary body — near-black with warm tint */
+  --color-text-secondary:#4B5563;   /* Supporting text, descriptions */
+  --color-text-muted:    #6B7280;   /* Captions, placeholders, subtitles */
+  --color-text-light:    #9CA3AF;   /* Disabled states, timestamps */
+  --color-text-inverse:  #FFFFFF;   /* Text on dark/accent backgrounds */
+
+  /* ── PRIMARY ACCENT — BLUE ──────────────────────────────── */
+  --color-accent:        #647DC8;   /* CTAs, links, active states, primary icons */
+  --color-accent-dark:   #4A63A8;   /* Pressed/active accent */
+  --color-accent-subtle: #EDE8FF;   /* Tinted badges, tag backgrounds, card hover */
+  --color-accent-border: rgba(100, 125, 200, 0.3); /* Accent-family border */
+
+  /* ── SECONDARY ACCENTS ──────────────────────────────────── */
+  --color-lavender:      #C9B8F5;   /* Secondary accent — pro features, night routine, locked states */
+  --color-lavender-light:#EDE8FF;   /* Lavender tinted surfaces */
+  --color-mint:          #A8EDD8;   /* Success states, beginner badges, acne/green coding */
+  --color-mint-light:    #E0FBF3;   /* Mint tinted surfaces */
+  --color-yellow:        #FFEA83;   /* Daily tips, warning states, "must have" badges */
+  --color-yellow-light:  #FFF8D6;   /* Yellow tinted surfaces */
+
+  /* ── SEMANTIC ───────────────────────────────────────────── */
+  --color-success:       #1A7A5A;   /* Good For tags, beginner fave badges */
+  --color-warning:       #9A7400;   /* Tip text, trending badges */
+  --color-error:         #C45D3A;   /* Avoid If tags, error states */
+  --color-info:          #4A2D9E;   /* Pro features, locked content, lavender-family text */
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Type Scale */
+  --text-xs:   0.625rem;   /* 10px — ALL-CAPS section labels, badges, tip labels */
+  --text-sm:   0.75rem;    /* 12px — captions, card subtitles, metadata */
+  --text-base: 0.8125rem;  /* 13px — body text, descriptions, nav links */
+  --text-md:   0.875rem;   /* 14px — button labels, prominent body */
+  --text-lg:   1rem;       /* 16px — lead text, hero subtitle */
+  --text-xl:   1.125rem;   /* 18px — card headings */
+  --text-2xl:  1.375rem;   /* 22px — section titles */
+  --text-3xl:  1.75rem;    /* 28px — page headings */
+  --text-4xl:  2.25rem;    /* 36px — hero on mobile */
+  --text-5xl:  3rem;       /* 48px — hero on desktop */
+
+  /* ── SPACING ────────────────────────────────────────────── */
+  --space-1:  0.25rem;   /*  4px — icon gaps, tight inline spacing */
+  --space-2:  0.5rem;    /*  8px — badge padding, small gaps */
+  --space-3:  0.75rem;   /* 12px — card internal gap, list item spacing */
+  --space-4:  1rem;      /* 16px — card padding (mobile), section internal */
+  --space-5:  1.25rem;   /* 20px — card padding (default) */
+  --space-6:  1.5rem;    /* 24px — section horizontal padding, button padding */
+  --space-8:  2rem;      /* 32px — section vertical padding (mobile) */
+  --space-10: 2.5rem;    /* 40px — hero padding bottom */
+  --space-12: 3rem;      /* 48px — hero padding top */
+  --space-16: 4rem;      /* 64px — large section separation */
+
+  /* ── SHAPE & BORDERS ────────────────────────────────────── */
+  --radius-sm:   6px;    /* Tags, badges, VS pill, progress bars, input fields */
+  --radius-md:   10px;   /* Buttons, nav CTA, tip icon, stat pills */
+  --radius-lg:   14px;   /* Cards (default), product cards */
+  --radius-xl:   18px;   /* Large feature cards, modals */
+  --radius-full: 9999px; /* Avatar only — forbidden on buttons and cards */
+
+  --border-width:        1.5px;  /* Default — heavier than 1px to be visible */
+  --border-width-strong: 2px;    /* Section dividers, nav borders, active states */
+  --border-width-accent: 4px;    /* Card left accent borders (Start Here cards) */
+  --border:              var(--border-width) solid var(--color-border);
+
+  /* ── SHADOWS & ELEVATION ────────────────────────────────── */
+  --shadow-sm:    0 2px 8px rgba(100, 125, 200, 0.08);   /* Cards at rest */
+  --shadow-md:    0 5px 18px rgba(100, 125, 200, 0.11);  /* Cards on hover */
+  --shadow-lg:    0 8px 28px rgba(100, 125, 200, 0.15);  /* Modals, dropdowns */
+  --shadow-btn:   0 2px 0 #4A2D9E55, 0 4px 20px rgba(139, 115, 224, 0.3);  /* Primary button resting */
+  --shadow-btn-hover: 0 4px 0 #4A2D9E55, 0 8px 28px rgba(139, 115, 224, 0.38); /* Primary button hover */
+  --shadow-focus: 0 0 0 3px rgba(100, 125, 200, 0.25);  /* Focus ring */
+
+  /* ── MOTION & INTERACTION ───────────────────────────────── */
+  --transition-fast:   100ms ease;    /* Colour changes, opacity */
+  --transition-base:   150ms ease;    /* Hover states — the standard */
+  --transition-slow:   200ms ease;    /* Card lift, transforms */
+  --transition-reveal: 180ms ease;    /* Hover CTA reveal (opacity + translateY) */
+  --transition-progress: 400ms ease;  /* Progress bar fill — slow and satisfying */
+
+  /* ── BREAKPOINTS ────────────────────────────────────────── */
+  --bp-sm:  480px;   /* Large phones */
+  --bp-md:  768px;   /* Tablets */
+  --bp-lg:  1024px;  /* Small desktop */
+  --bp-xl:  1280px;  /* Full desktop */
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INTENTIONAL DESIGN DECISIONS (DO NOT CHANGE)
+   ══════════════════════════════════════════════════════════════
+   
+   1. Shadows are ALWAYS blue-tinted (never black/grey)
+   2. Borders are 1.5px minimum (never 1px - must be visible)
+   3. Left accent borders are 4px (vertical structure, not top bars)
+   4. Progress bars are flat rectangles (no border-radius)
+   5. Button radius is 10px (never pill-shaped)
+   6. Card radius is 14px (never fully rounded)
+   7. Orbs are low opacity (0.08-0.22) - atmosphere, not decoration
+   8. Gradients only on: hero bg, buttons, nav CTA, section labels, routine strips
+   9. No bounce/spring easing - only ease, ease-out, ease-in-out
+   10. Heading font-weight minimum 600 (Sora 800 for h1/h2)
+   
+   ══════════════════════════════════════════════════════════════ */
